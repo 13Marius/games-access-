@@ -154,47 +154,44 @@
 
 </div>
 
-
-
-
 <script>
-  $(document).ready(function() {
-    // Inițializează modalele
-    $(".modal-content").dialog({
-      autoOpen: false,
-      modal: true,
-      autoOpen: false,
-      modal: true,
-      width: "auto", // Lățimea automată
-      width: "auto", // Lățimea automată
-      buttons: {
-        Închide: function() {
-          $(this).dialog("close");
+    $(document).ready(function() {
+      // Inițializează modalele
+      $(".modal-content").dialog({
+        autoOpen: false,
+        modal: true,
+        width: "auto", // Lățimea automată
+        buttons: {
+          Închide: function() {
+            $(this).dialog("close");
+          }
         }
-      }
+      });
+  
+      // Deschide Modal 1 la apăsarea butonului 1
+      $("#openModal1").on("click", function() {
+        $("#myModal1").dialog("open");
+      });
+  
+      // Deschide Modal 2 la apăsarea butonului 2
+      $("#openModal2").on("click", function() {
+        $("#myModal2").dialog("open");
+      });
+  
+      // Deschide Modal 3 la apăsarea butonului 3
+      $("#openModal3").on("click", function() {
+        $("#myModal3").dialog("open");
+      });
+  
+      // Închide orice modal la apăsarea butonului "Închide Modal"
+      $(".closeModal").on("click", function() {
+        $(".modal-content").dialog("close");
+      });
     });
+  </script>
 
-    // Deschide Modal 1 la apăsarea butonului 1
-    $("#openModal1").on("click", function() {
-      $("#myModal1").dialog("open");
-    });
 
-    // Deschide Modal 2 la apăsarea butonului 2
-    $("#openModal2").on("click", function() {
-      $("#myModal2").dialog("open");
-    });
 
-    // Deschide Modal 3 la apăsarea butonului 3
-    $("#openModal3").on("click", function() {
-      $("#myModal3").dialog("open");
-    });
-
-    // Închide orice modal la apăsarea butonului "Închide Modal"
-    $(".closeModal").on("click", function() {
-      $(".modal-content").dialog("close");
-    });
-  });
-</script>
     </section>
 
     <section>
