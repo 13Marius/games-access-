@@ -51,7 +51,21 @@
       }
     }
     
-  
+    .modal-content {
+      display: none;
+    }
+
+    .modal-content img {
+      width: 100%; /* Asigură că imaginea ocupă întreaga lățime a containerului */
+      height: auto; /* Păstrează proporțiile originale ale imaginii */
+    }
+
+    /* Stiluri pentru ecrane mici */
+    @media screen and (max-width: 767px) {
+      .modal-content {
+        width: 90%;
+      }
+    }
   
     .modal {
       display: none;
@@ -119,19 +133,19 @@
 <button id="openModal3"><h4>Deschide Modal 3</h4></button>
 
 <!-- Modal 1 -->
-<div class="modal" id="myModal1">
+<div class="modal-content" id="myModal1" title="Modal 1">
   <p> <img src="poze/greseala.jpg" width="450px"></p>
   <button class="closeModal"><h3>Închide Modal</h3></button>
 </div>
 
 <!-- Modal 2 -->
-<div class="modal" id="myModal2">
+<div class="modal-content" id="myModal2" title="Modal 2">
   <p><img src="poze/Try again.jpg" width="350px" height="350px"></p>
   <button class="closeModal"><h3>Închide Modal</h3></button>
 </div>
 
 <!-- Modal 3 -->
-<div class="modal" id="myModal3">
+<div class="modal-content" id="myModal3" title="Modal 3">
   <p><img src="poze/Not to bad.jpg" width="450px"></p>
   <p>Bine, bine ai reusit ok! Apasa pe <b><i>Mergi mai departe  <i></b> </p>
   </br>
